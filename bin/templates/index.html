@@ -1,5 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1><p>Seriously who the fuck brawled</p></h1>
+<h1><p>Level 2 power spike?</p></h1>
+{% for champ in champ_list %}
+ <p>{{ champ }}</p>
+{%endfor%}
 {% endblock %}
 

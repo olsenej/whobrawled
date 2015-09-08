@@ -6,7 +6,9 @@ from flask_bootstrap import Bootstrap
 import pymysql
 import re
 
-# create our little application :)
+from getmatch import champ_list
+
+# create little application
 app = Flask(__name__)
 Bootstrap(app)
 app.config.from_object(__name__)
@@ -29,7 +31,7 @@ def teardown_request(exception):
 @app.route('/')
 def index():
 
-	return render_template('index.html')
+	return render_template('index.html',champ_list=champ_list)
 
 
 @app.route('/images')
